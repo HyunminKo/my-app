@@ -17,6 +17,26 @@ public class User {
     private String name;
     private String email;
 
+    public long getId() {
+        return id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }
@@ -32,7 +52,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    public void update(User newUser) {
+        this.password = newUser.password;
+        this.name = newUser.name;
+        this.email = newUser.email;
+    }
     @Override
     public String toString() {
         return "User{" +
@@ -42,4 +66,6 @@ public class User {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+
 }
